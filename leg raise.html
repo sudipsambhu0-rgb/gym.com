@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin:0;
+      padding:0;
+    }
+    body {
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#0055FF;
+      flex-direction:column;
+    }
+    .text {
+      color:#41F300;
+    }
+    .intro {
+      color:#00FFFE;
+      width:90%;
+      text-align:center;
+    }
+    .box {
+      position:relative;
+      height:400px;
+      width:380px;
+      background:#00FF28;
+      margin-top:20px;
+    }
+    p {
+      color:red;
+    }
+    #btn, #btn2 {
+      position:absolute;
+      height:40px;
+      width:120px;
+      background:#00CDFF;
+      border:5px solid #0009FF;
+      top:230px;
+      left:130px;
+    }
+    #btn2 {
+      display:none; 
+    }
+    #time {
+      font-size:40px;
+      text-align:center;
+      margin-top:50px;
+      color:#6E00FE;
+    }
+    .xy {
+      position:absolute;
+      height:40px;
+      width:150px;
+      background:#1400FE;
+      color:#D9DAD7;
+      top:298px;
+      left:130px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 class="text">9.) Leg raises</h1>
+
+  <p class="intro">
+    Leg Raises are a core-strengthening exercise that mainly targets the lower abdominal muscles. The movement involves lifting the legs upward while lying flat on the back. This exercise improves core stability, strengthens the abs, and enhances body control. Leg Raises also help improve hip flexibility. They are commonly used in fitness routines focused on abdominal strength and endurance.
+
+  </p>
+  <p>Task : Do 30 claf raises and increace day by day</p>
+
+  <div class="box">
+    <button id="btn">Start</button>
+    <button id="btn2">Stop</button>
+    <p id="time"> Timer : 0</p>
+    <a  class="xy" href="slow mountain climbers.html">Click to go next exercises</a>
+  </div>
+  <script>
+    let btn = document.getElementById("btn");
+    let btn2 = document.getElementById("btn2");
+    let time = document.getElementById("time");
+
+    let timer = null;
+    let seconds = 0;
+
+    btn.addEventListener("click", () => {
+      if (timer !== null) return; 
+
+      timer = setInterval(() => {
+        seconds++;
+        time.innerText = seconds;
+      }, 1000);
+
+      btn.style.display = "none";
+      btn2.style.display = "inline-block";
+    });
+
+    btn2.addEventListener("click", () => {
+      clearInterval(timer);
+      timer = null;
+
+      btn2.style.display = "none";
+      btn.style.display = "inline-block";
+    });
+  </script>
+
+</body>
+</html>
