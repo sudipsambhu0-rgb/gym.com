@@ -27,11 +27,13 @@
     h1 {
       font-size: 3rem;
       margin-bottom: 20px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
     }
 
     p {
       font-size: 1.2rem;
       margin-bottom: 40px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     }
 
     #startBtn {
@@ -73,12 +75,12 @@
   <p>Click below to start your training journey:</p>
 
   <!-- Start Training Button -->
-  <button id="startBtn">Start Training</button>
+  <button id="startBtn" type="button">Start Training</button>
 
   <script>
     const btn = document.getElementById("startBtn");
     btn.addEventListener("click", function() {
-      window.location.href = "privacy.html"; 
+      window.location.href = "privacy.html"; // Redirect to privacy.html
     });
   </script>
 
