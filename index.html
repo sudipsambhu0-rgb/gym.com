@@ -2,9 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=privacy.html">
-  <title>Redirecting...</title>
+  <title>FitnessCom - Start Training</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: #fff;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+
+    #startBtn {
+      background-color: #ff5722;
+      color: #fff;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    #startBtn:hover {
+      background-color: #e64a19;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      #startBtn {
+        padding: 12px 30px;
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <h1>Welcome to FitnessCom</h1>
+  <p>Click below to start your training journey:</p>
+
+  <!-- Start Training Button -->
+  <button id="startBtn">Start Training</button>
+
+  <script>
+    const btn = document.getElementById("startBtn");
+    btn.addEventListener("click", function() {
+      window.location.href = "squats.html"; // Redirect to squats.html
+    });
+  </script>
+
 </body>
 </html>
